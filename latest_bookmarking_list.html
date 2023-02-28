@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>latest-bookmarking-list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/d252559436.js" crossorigin="anonymous"></script>
+ 
+  <style>
+    * {
+  box-sizing: border-box;
+}
+    body{
+      font-family: sans-serif;
+    }
+  .add-img-body {
+    height: 200px;
+    background: #aaa;
+  }
+  .sidemenu-img{
+    height: 400px;
+    background: #aaa;
+  }
+  .fa_s {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:50%
+}
+.fa_latest_submit {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 3px;
+
+}
+.fa_menu{
+  margin-right: 5px;
+}
+.dropdown a{
+  margin-right: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: white;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.dropdown-menu {
+  display: none;
+  margin-top: 1px;
+  padding: 0px;
+  border-radius: 0px;
+
+}
+.dropdown-item {
+  color: #1f0f0f;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;display: block;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.latest-bookmarking-div{
+    background-color: #ddedfe;
+    border:2px dashed #2750ac;
+    padding: 10px;
+}
+
+.prev_next a, .prev_next span {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.prev_next a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+ 
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;float: right;
+}
+.next::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+  </style>
+</head>
+<body>
+
+<div class="p-1 bg-white text-black text-center">
+  <img src="./logo.png"  class="mx-auto d-block img-fluid" style="height: 100px;">
+</div>
+
+<nav class="navbar navbar-expand-sm  justify-content-center"  style="line-height: 10px; background-color: #3477b7;">
+    <div class="container" style="margin-top: -6px; margin-bottom: -7px;">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav" style="font-size: 14px;">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa_menu fa fa-bookmark" aria-hidden="true" ></i>bookmarking</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-sharp fa-regular fa-bookmark fa_menu"></i>Latest New Bookmarking List</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-sharp fa-regular fa-bookmark fa_menu" aria-hidden="true" ></i>January Bookmarking List</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-sharp fa-regular fa-bookmark fa_menu" aria-hidden="true" ></i>High PR Bookmarking</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-sharp fa-regular fa-bookmark fa_menu" aria-hidden="true" ></i>Bookmarking List</a></li>
+              </ul>
+          </li>
+
+        
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa-solid fa-display fa_menu"></i>directory</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-display fa_menu"></i>Free High DA Directory</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-display fa_menu" aria-hidden="true" ></i>Deep Links Directory</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-display fa_menu" aria-hidden="true" ></i>Instant Approval Directory</a></li>
+                </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa-solid fa-pen fa_menu"></i> article</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen fa_menu"></i>Article Submission List</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-solid fa-pen fa_menu"></i>Instant Approval Articles</a></li>
+                </ul>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link  text-white text-uppercase "  role="button" ><i class="fa-sharp fa-regular fa-file fa_menu"></i>Press Release</a>
+          
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa-sharp fa-solid fa-bars fa_menu"></i>classified</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-sharp fa-solid fa-check fa_menu"></i>France Classified</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-sharp fa-solid fa-check fa_menu"></i>Germany Classified</a></li>
+                </ul>
+          </li>
+
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa-solid fa-circle-info fa_menu"></i> More seo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-sharp fa-solid fa-check fa_menu"></i>PDF Submission</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-sharp fa-solid fa-check fa_menu"></i>PPT Submission</a></li>
+                </ul>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white text-uppercase " data-bs-toggle="dropdown" >
+              <i class="fa-sharp fa-solid fa-check fa_menu"></i>Business Listing</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><i class="fa-sharp fa-solid fa-check fa_menu"></i>Dubai Business Listing</a></li>
+                <li><a class="dropdown-item" href="#"> <i class="fa-sharp fa-solid fa-check fa_menu"></i>Kenya Business Listing</a></li>
+                </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link  text-white text-uppercase " >
+              more</a>
+             
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container  mt-3">
+<img src="./baner.jpg"  class="mx-auto d-block img-fluid">
+
+  </div>
+
+<div class="container mt-3">
+
+  <div class="row">
+    <div class="col-sm-8">
+        <h3 class="mt-3 mb-3">Latest Bookmarking Submission Sites List</h3>
+        <a href="#" class="fa_latest_submit fa fa-facebook"></a>
+<a href="#" class="fa_latest_submit fa fa-twitter"></a>
+<a href="#" class="fa_latest_submit fa fa-google"></a>
+<a href="#" class="fa_latest_submit fa fa-linkedin"></a>
+<a href="#" class="fa_latest_submit fa fa-youtube"></a>
+<a href="#" class="fa_latest_submit fa fa-instagram"></a>
+<a href="#" class="fa_latest_submit fa fa-pinterest"></a>
+<a href="#" class="fa_latest_submit fa fa-snapchat-ghost"></a>
+
+<img src="./Latest-Social-Bookmarking-Submission-Sites-List-min.jpg" class="mx-auto d-block img-fluid mt-5 mb-3">
+
+      <div class="latest-bookmarking-div">
+        <h4>Table of Contents</h4>
+        <ul>
+            <li><a href="#" style="text-decoration: none;color: #1f0f0f;">Here is the Editor’s Pick List 2023</a></li>
+            <li><a href="#" style="text-decoration: none;color: #1f0f0f;">Here is the Editor’s Pick List 2023</a></li>
+            <li><a href="#" style="text-decoration: none;color: #1f0f0f;">Here is the Latest Bookmarking Submission Sites List 2023</a></li>
+        </ul>
+      </div>
+<h3 class="mt-5"><strong>Here is the Editor’s Pick List 2023</strong></h3>
+      <table class="table table-hover table-striped">
+        <thead class="table-success">
+          <tr>
+            <th>S.NO</th>
+            <th>Editors Pick Sponsor Listing</th>
+            <th>MONTH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+        </tbody>
+      </table>
+  
+
+      <h3 class="mt-5"><strong>Here is the Premium Sponsor List 2023</strong></h3>
+      <table class="table table-hover table-striped">
+        <thead class="table-success">
+          <tr>
+            <th>S.NO</th>
+            <th>Premium Sponsor Listing</th>
+            <th>MONTH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="mt-5"><strong>Here is the Latest Bookmarking Submission Sites List 2023</strong></h3>
+      <table class="table table-hover table-striped">
+        <thead class="table-success">
+          <tr>
+            <th>S.NO</th>
+            <th>Bookmarking List</th>
+            <th>MONTH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Doe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Moe</td>
+            <td>march</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Dooley</td>
+            <td>march</td>
+          </tr>
+        </tbody>
+      </table>
+<div class="prev_next pt-4">
+<p style="text-align: center;">1 of 10</p>
+    <span  class="previous">&laquo; Previous</span> 
+    
+    <a href="#" class="next">Next &raquo;</a>
+</div>
+      
+    </div>
+
+    <div class="col-sm-4 ">
+      <div class="col-sm-12 "> <img src="./1.jpg"  class="mx-auto d-block img-fluid"alt=""></div>
+ 
+  <div class=" mt-3">
+       <img src="./2.png" class="mx-auto d-block img-fluid">
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-3 pt-4 bg-dark text-white text-center">
+ <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+ 
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-2">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-4  mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold text-white mb-2">
+            </i>Company logo
+          </h6>
+          <p>
+          
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4  mx-auto mb-2">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white">
+           about us
+          </h6>
+          <p class="text-white">SEO Khazana Helps You To Succeed In Blogging. In This Place, You Will Find Digital Marketing,
+             Blogging Tips, Review and New SEO Strategies, SEO Off Page Backlinks List.</p>
+        
+        </div>
+        <!-- Grid column -->
+
+       
+
+        <!-- Grid column -->
+        <div class="col-md-4  mx-auto  mb-2">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white ">follow us</h6>
+          <a href="#" class="fa_s fa fa-facebook"></a>
+<a href="#" class="fa_s fa fa-twitter"></a>
+<a href="#" class="fa_s fa fa-youtube"></a>
+<a href="#" class="fa_s fa fa-instagram"></a>
+     
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+
+</footer>
+<!-- Footer -->
+
+</div>
+  <!-- Copyright -->
+  <div class="text-center p-1" style="background-color:black">
+    © 2009-2021 SEO Khazana. All rights reserved.
+   
+  </div>
+  <!-- Copyright -->
+</body>
+</html>
